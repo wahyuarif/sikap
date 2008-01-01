@@ -10,6 +10,7 @@ $(document).ready(function() {
       	{"data": "judul" },
 		{"data": "nm_instansi" },
 		{"data": "nm_dosen" },
+		{"data": "nm_dosen2" },
 		{"data": "nim" },
 		{"data": "nm_mhs" },
 		{"data": "status" }
@@ -40,31 +41,27 @@ $(document).ready(function() {
 		]
 	});
 
-
-	// $(document).ready(function() {
-	//     var table = $('#example').DataTable();
-	 
-	//     $('#example tbody').on( 'click', 'tr', function () {
-	//         $(this).toggleClass('selected');
-	//     } );
-	 
-	//     $('#button').click( function () {
-	//         alert( table.rows('.selected').data().length +' row(s) selected' );
-	//     } );
-	// } );
-
+    var cn = 0;
 	$('#lookup_dosbing tbody').on('click', 'tr', function (e) {
 		var selected = $(this).toggleClass('selected');
 
 		var table = $('#lookup_dosbing').DataTable();
         var data = table.row( this ).data();
+        cn += 1;
 
-        $('#nik').val(data["nik"]);
-        $('#nm_dosen').val(data["nm_dosen"]);
-
-        $('#nik_ops').val(data["nik"]);
-        $('#nm_dosen_ops').val(data["nm_dosen"]);
-        // $('.close').click();
+        if(cn == 1) {
+			$('#nik').val(data["nik"]);
+        	$('#nm_dosen').val(data["nm_dosen"]);
+        } else {
+        	$('#nik2').val(data["nik"]);
+        	$('#nm_dosen2').val(data["nm_dosen"]);
+		}
+        if (cn == 2) {
+        	$('.close').click();
+        } else if (cn > 2) {
+        	cn = 0;
+        	$('.close').click();
+        }
     });
 
 
@@ -128,6 +125,8 @@ $(document).ready(function() {
 			$('#nm_instansi').val(json.nm_instansi);
 			$('#nik').val(json.nik);
 			$('#nm_dosen').val(json.nm_dosen);
+			$('#nik2').val(json.nik);
+			$('#nm_dosen2').val(json.nm_dosen);
 		});
 	}
 
@@ -135,6 +134,7 @@ $(document).ready(function() {
 	function updateDosbing(){
 		var no_pengajuan= $('#no_pengajuan').val();
 		var nik			= $('#nik').val();
+		var nik2		= $('#nik2').val();
 		$.ajax({
 			url:  urlAPI+"/app/module/penentuandosbing/penentuan_dosbing_update.php",
 			type: 'POST',
@@ -142,7 +142,8 @@ $(document).ready(function() {
 			data: {
 				'aksi'			:'update',
 				'no_pengajuan'	:no_pengajuan,
-				'nik'           :nik
+				'nik'           :nik,
+				'nik2'			:nik2
 			},
 			success : function(data){
 				alert(data.pesan);

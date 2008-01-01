@@ -47,6 +47,9 @@ session_start();
         width: 900px;
         background: black;
     }
+    .margin{
+        margin-left: 120px;
+    }
 
     </style>
 </head>
@@ -90,17 +93,18 @@ echo  "$bulan";
         <p>
             
             <center><img class="wrapper" src="../lib/img/kop.png"></center>
-            
-            <b><u><center>SURAT TUGAS PEMBIMBINGAN KERJA PRAKTEK</center></u></b><br>
-            <center><b>No. 718/FTIK-UNSIQ/<?php echo "$bulan" ?>/<?php echo date('Y'); ?></b></center>
-            <br><br>
-            <b><i>Assalamu’alaikum Wr. Wb.</i></b> <br>
+            <p class="margin">
+                <b><u><center>SURAT TUGAS PEMBIMBINGAN KERJA PRAKTEK</center></u></b><br>
+                <center><b>No. 718/FASTIKOM-UNSIQ/<?php echo "$bulan" ?>/<?php echo date('Y'); ?></b></center>
+                <br><br>
+            </p>
+            <b class="margin"><i>Assalamu’alaikum Wr. Wb.</i></b> <br>
             
 
-            <p>
+            <p  class="margin">
                 Dekan Fakultas Teknik dan Ilmu Komputer (FTIK) Universitas Sains Al Qur’an <br>(UNSIQ) Jawa Tengah di Wonosobo memberikan tugas kepada :
                 <br><br>
-                <table>
+                <table style="margin-left: 120px">
                      <tr>
                         <td width="80">Nama</td>
                         <td>:</td>
@@ -114,7 +118,7 @@ echo  "$bulan";
                       <tr>
                         <td width="80">Nama</td>
                         <td>:</td>
-                        <td id="nm_dosen" contenteditable="true">*input disini</td>
+                        <td id="nm_dosen2" contenteditable="true">*input disini</td>
                     </tr>
                      <tr>
                         <td width="80">&nbsp;</td>
@@ -124,10 +128,10 @@ echo  "$bulan";
                 </table>
             </p>
 
-            <p>
+            <p class="margin">
                 Untuk memberikan bimbingan Kerja Praktek (KP) kepada mahasiswa tersebut di bawah <br>ini :
                 <br>
-                <table>
+                <table class="margin">
                     <tr>
                         <td width="80">Nama</td>
                         <td>:</td>
@@ -146,7 +150,7 @@ echo  "$bulan";
                </table>
             </p>
 
-            <p>
+            <p class="margin">
                 Selama melakukan pembimbingan, harus dailaksanakan dengan sungguh-sungguh dan <br>
                 tidak menyimpang dari kaidah keilmuannya. Pembimbing Kerja Praktek (KP)  <br>
                 maksimal dilakukuan selama 6 bulan . Jika sampai batas waktu yang telah ditentukan mahasiswa <br>

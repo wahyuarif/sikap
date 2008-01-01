@@ -9,6 +9,7 @@ $(document).ready(function() {
             $('#nim').text(json.nim);
             $('#prodi').text(json.prodi);
             $('#nm_dosen').text(json.nm_dosen);
+            $('#nm_dosen2').text(json.nm_dosen2);
             $('#dekan').text(json.wadek.nm_dosen);
             // console.log(json);
         });

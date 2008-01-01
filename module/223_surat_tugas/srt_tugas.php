@@ -78,9 +78,9 @@ session_start();
                                 <div class="col-md-6">
                                     <label>Surat Tugas Kp/Ta</label>
                                     <select class="form-control" name="status" id="status">
-                                        <option value="">Pilih surat: Ta/Kp</option>
-                                        <option value="Kerja Praktek">Kerja Praktek</option>
-                                        <option value="Tugas Akhir">Tugas Akhir</option>
+                                        <option value="" selected="selected">Pilih surat: Ta/Kp</option>
+                                        <option value="kp">Kerja Praktek</option>
+                                        <option value="ta">Tugas Akhir</option>
                                     </select>
                                 </div>
                             </div>
@@ -117,9 +117,9 @@ session_start();
                             <br>*option
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" name="nik" id="nik" placeholder="Nik" readonly="" />                            </div>
+                                    <input type="text" class="form-control" name="nik2" id="nik2" placeholder="Nik" readonly="" />                            </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="nm_dosen" id="nm_dosen" placeholder="Nama Dosen" readonly="" />
+                                    <input type="text" class="form-control" name="nm_dosen2" id="nm_dosen2" placeholder="Nama Dosen" readonly="" />
                                 </div>
                                 <div class="col-md-1">
                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#dosenModal">
@@ -127,7 +127,7 @@ session_start();
                                     </button>
                                 </div>
                             </div>
-                            <input type="text" name="prodi" id="prodi">
+                            <input type="hidden" name="prodi" id="prodi">
                         </div>
                         <!-- <button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success">Save</button> -->
                         <!-- <button type="button" id="update" name="update" class="btn btn-sm btn-warning">Update</button> -->
@@ -144,7 +144,8 @@ session_start();
                     <thead>
                         <tr>
                             <th>No. Pengajuan</th>
-                            <th>Dos. Pem.</th>
+                            <th>Dos. Pem 1</th>
+                            <th>Dos. Pem 2</th>
                             <th>Nim</th>
                             <th>Nama</th>
                             <th>Status</th>

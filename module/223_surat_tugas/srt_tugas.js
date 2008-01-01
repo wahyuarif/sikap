@@ -8,11 +8,16 @@ $(document).ready(function() {
         "columns": [
             {"data": "no_pengajuan" },
             {"data": "nm_dosen" },
+            {"data": "nm_dosen2" },
             {"data": "nim" },
             {"data": "nm_mhs" },
             {"data": "status" }
 
         ]
+    });
+
+    $('#status').change(function(){
+        alert($(this).val());
     });
 
 
@@ -66,7 +71,7 @@ $(document).ready(function() {
     
     /* Cetak */
     $('#cetak').click(function(){
-        cetakKp();
+        cetakSurat();
     });
 
     /* CUSTOM FUNCTION */
@@ -76,10 +81,14 @@ $(document).ready(function() {
         });
     }
 
-    function cetakKp(){
+    function cetakSurat(){
         var no_pengajuan = $('#no_pengajuan').val();
-        $('.konten').load('223_surat_tugas/cetak_kp.php','no_pengajuan='+no_pengajuan);
-    }
+        var stat = $('#status').val();
+        if (stat == "kp") {
+            $('.konten').load('223_surat_tugas/cetak_kp.php','no_pengajuan='+no_pengajuan);
+        } else {
+            $('.konten').load('223_surat_tugas/cetak_ta.php','no_pengajuan='+no_pengajuan);
+        } 
 
     function loadData(){
         var aksi = "load";
@@ -92,6 +101,8 @@ $(document).ready(function() {
             $('#nm_instansi').val(json.nm_instansi);
             $('#nik').val(json.nik);
             $('#nm_dosen').val(json.nm_dosen);
+            $('#nik2').val(json.nik2);
+            $('#nm_dosen2').val(json.nm_dosen2);
             $('#prodi').val(json.prodi);
 
         });

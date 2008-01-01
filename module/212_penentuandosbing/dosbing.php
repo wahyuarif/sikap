@@ -108,9 +108,9 @@ session_start();
 		                <br>*option
 		                <div class="row">
 		                    <div class="col-md-4">
-		                        <input type="text" class="form-control" name="nik" id="nik_ops" placeholder="Nik" readonly="" />		                    </div>
+		                        <input type="text" class="form-control" name="nik2" id="nik2" placeholder="Nik" readonly="" />		                    </div>
 		                    <div class="col-md-6">
-		                        <input type="text" class="form-control" name="nm_dosen" id="nm_dosen_ops" placeholder="Nama Dosen" readonly="" />
+		                        <input type="text" class="form-control" name="nm_dosen2" id="nm_dosen2" placeholder="Nama Dosen" readonly="" />
 		                    </div>
 		                    <div class="col-md-1">
 		                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#dosenModal">
@@ -136,7 +136,8 @@ session_start();
 							<th>No Pengajuan</th>
 							<th>Judul</th>
 							<th>Instansi</th>
-							<th>Dos. Pem.</th>
+							<th>Dos. Pem1</th>
+							<th>Dos. Pem2</th>
 							<th>Nim</th>
 							<th>Nama</th>
 							<th>Status</th>
