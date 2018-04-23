@@ -65,23 +65,23 @@ $(document).ready(function() {
     });
 
     /* SAVE */
-    $('#save').click(function(){
-    	savePengajuanKp();
-    	resetForm();
-    	$('.konten').load('421_pengajuan_kp/pengajuan_kp.php');
-		});
+  //   $('#save').click(function(){
+  //   	savePengajuanKp();
+  //   	resetForm();
+  //   	$('.konten').load('421_pengajuan_kp/pengajuan_kp.php');
+		// });
 	
 	
 	/* DELETE */
-	$('#delete').click(function(){
-		deletePengajuanKp();
-		resetForm();
-		$('.konten').load('421_pengajuan_kp/pengajuan_kp.php');
-		});
+	// $('#delete').click(function(){
+	// 	deletePengajuanKp();
+	// 	resetForm();
+	// 	$('.konten').load('421_pengajuan_kp/pengajuan_kp.php');
+	// 	});
 
 	/*Cetak*/
 	$('#cetak').click(function(){
-		cetakPengajuanKp();
+		cetakIjinSurvey();
 		});
 
 
@@ -101,66 +101,12 @@ $(document).ready(function() {
 	}
 
 	function loadData(){
-		var aksi = "load";
-		var no_pengajuan = $('#no_pengajuan').val();
-		$.getJSON(urlAPI+'/app/module/pengajuan_kp/pengajuan_kp_load.php', {aksi:aksi, no_pengajuan:no_pengajuan}, function(json) {
+		$.getJSON(urlAPI+'/app/module/srt_ijin_survey/surat_load.php', function(json) {
 			$('#no_pengajuan').val(json.no_pengajuan);
-			$('#judul').val(json.judul);
-			$('#nm_instansi').val(json.nm_instansi);
-			$('#alamat').val(json.alamat);
-			$('#phone').val(json.phone);
-
-			// berikut tidak ditampilkan di form, hanya untuk ngambil data
 			$('#nim').val(json.nim);
 			$('#nm_mhs').val(json.nm_mhs);
 			$('#prodi').val(json.prodi);
 		});
 	}
 
-	function savePengajuanKp(){
-		var judul 		= $('#judul').val();
-		var nm_instansi = $('#nm_instansi').val();
-		var alamat 		= $('#alamat').val();
-		var phone 		= $('#phone').val();
-		$.ajax({
-			url:  urlAPI+"/app/module/pengajuan_kp/pengajuan_kp_save.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				'aksi'			:'save',
-				'judul'			:judul,
-				'nm_instansi'	:nm_instansi,
-				'alamat'		:alamat,
-				'phone'			:phone,
-			},
-			success : function(data){
-				alert(data.pesan);
-			}, 
-			error: function(data){
-				alert(data.pesan);
-			}
-		});
-	}
-
-
-
-	function deletePengajuanKp(){
-		var no_pengajuan = $('#no_pengajuan').val();
-		$.ajax({
-			url:  urlAPI+"/app/module/pengajuan_kp/pengajuan_kp_delete.php",
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				'aksi':'delete',
-				'no_pengajuan':no_pengajuan
-			},
-			success : function(data){
-				alert(data.pesan);
-			}, 
-			error: function(data){
-				alert(data.pesan);
-			}
-		});
-
-	}
 });
