@@ -64,25 +64,15 @@ $(document).ready(function() {
     	
     });
 
-    /* SAVE */
-  //   $('#save').click(function(){
-  //   	savePengajuanKp();
-  //   	resetForm();
-  //   	$('.konten').load('421_pengajuan_kp/pengajuan_kp.php');
-		// });
-	
-	
-	/* DELETE */
-	// $('#delete').click(function(){
-	// 	deletePengajuanKp();
-	// 	resetForm();
-	// 	$('.konten').load('421_pengajuan_kp/pengajuan_kp.php');
-	// 	});
-
 	/*Cetak*/
 	$('#cetak').click(function(){
 		cetakIjinSurvey();
 		});
+
+	function cetakIjinSurvey(){
+		var no_pengajuan = $('#no_pengajuan').val();
+        $('.konten').load('424_srt_ijin_survey/srt_ijin_survey.php','no_pengajuan='+no_pengajuan);
+	}
 
 
 		/* CUSTOM FUNCTION */
