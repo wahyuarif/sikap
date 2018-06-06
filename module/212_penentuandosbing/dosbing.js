@@ -40,12 +40,31 @@ $(document).ready(function() {
 		]
 	});
 
+
+	// $(document).ready(function() {
+	//     var table = $('#example').DataTable();
+	 
+	//     $('#example tbody').on( 'click', 'tr', function () {
+	//         $(this).toggleClass('selected');
+	//     } );
+	 
+	//     $('#button').click( function () {
+	//         alert( table.rows('.selected').data().length +' row(s) selected' );
+	//     } );
+	// } );
+
 	$('#lookup_dosbing tbody').on('click', 'tr', function (e) {
+		var selected = $(this).toggleClass('selected');
+
 		var table = $('#lookup_dosbing').DataTable();
         var data = table.row( this ).data();
+
         $('#nik').val(data["nik"]);
         $('#nm_dosen').val(data["nm_dosen"]);
-        $('.close').click();
+
+        $('#nik_ops').val(data["nik"]);
+        $('#nm_dosen_ops').val(data["nm_dosen"]);
+        // $('.close').click();
     });
 
 

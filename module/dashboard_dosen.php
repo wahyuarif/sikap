@@ -143,12 +143,23 @@ if(!$_SESSION){
             <ul class="dropdown-menu">
               </li>
               <li class="dropdown-submenu">
-                <a href="#">3.1-Transaksi</a>
+                <a href="#">3.1-Master</a>
                 <ul class="dropdown-menu">
-                  <li><a class="klik" id="311" href="#">3.1.1-Status Bimbingan</a></li>
+                  <li><a class="klik" id="311" href="#">...</a></li>
                 </ul>
               </li>
-              <li><a href="#">3.3-Laporan</a></li> 
+              <li class="dropdown-submenu">
+                <a href="#">3.2-Transaksi</a>
+                <ul class="dropdown-menu">
+                  <li><a class="klik" id="321" href="#">3.2.1-Status Bimbingan</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">3.3-Laporan</a>
+                <ul class="dropdown-menu">
+                  <li><a class="klik" id="#" href="#">...</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
 
@@ -224,8 +235,8 @@ if(!$_SESSION){
               $('.konten').load('212_penentuandosbing/dosbing.php');                 
             }else if(menu == "411"){
               $('.konten').load('411_pengajuan_kp/pengajuan_kp.php');
-            }else if(menu == "311"){
-              $('.konten').load('311_status_bimbingan/status_bimbingan.php');
+            }else if(menu == "321"){
+              $('.konten').load('321_status_bimbingan/status_bimbingan.php');
             }else if(menu == "412"){
               $('.konten').load('412_bimbingan/bimbingan.php'); 
             }  
@@ -247,7 +258,7 @@ if(!$_SESSION){
                 }else if(menu == "411"){
                   $('.konten').load('411_pengajuan_kp/pengajuan_kp.php');
                 }else if(menu == "311"){
-                  $('.konten').load('311_status_bimbingan/status_bimbingan.php');
+                  $('.konten').load('321_status_bimbingan/status_bimbingan.php');
                 }else if(menu == "412"){
                   $('.konten').load('412_bimbingan/bimbingan.php'); 
                 }  else if(menu == "999"){

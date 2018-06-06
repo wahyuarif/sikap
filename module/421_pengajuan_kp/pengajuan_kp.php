@@ -11,36 +11,8 @@ session_start();
 	<title></title>
 
 	<!-- Custom CSS -->
-	<style type="text/css">
-		.form-control{
-			padding-bottom: auto;
-			margin-bottom: 5px;
-		}
-
-		fieldset 
-			{
-				border: 1px solid #ddd !important;
-				margin: 0;
-				xmin-width: 0;
-				padding: 10px;       
-				position: relative;
-				border-radius:4px;
-				background-color:#f5f5f5;
-				padding-left:10px!important;
-			}	
-			
-		legend
-			{
-				font-size:14px;
-				font-weight:bold;
-				margin-bottom: 0px; 
-				width: 35%; 
-				border: 1px solid #ddd;
-				border-radius: 4px; 
-				padding: 5px 5px 5px 10px; 
-				background-color: #ffffff;
-			}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../lib/css/custom.css">
+	<link rel="stylesheet" href="../lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!-- Call JQuery Library -->
     <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 
@@ -65,7 +37,7 @@ session_start();
 			<!-- Form Place -->
 			<div class="col-md-4 column">
 			<fieldset>
-				<legend>PENGAJUAN TEMPAT KP</legend>
+				<legend>PENGAJUAN TEMPAT KP/TA</legend>
 			    <!-- Form CRUD Book Master -->
 				<!-- <form class="form" id="frmanggota" action="" method="post"> -->
 					<div class="form-group">
@@ -81,9 +53,9 @@ session_start();
 								<input type="hidden" name="prodi" id="prodi">
 		            <!-- end hiden type -->
 								
-							<label>Judul Kp</label>
+							<label>Judul</label>
 							<input type="text" class="form-control" id="judul" name="judul" 
-							required placeholder="Masukan judul ...">
+							 placeholder="Masukan judul(KP/TA)">
 					
 						<label>Nama Instansi dan Phone</label>
 						<div class="row">
@@ -103,15 +75,25 @@ session_start();
 
 					
 					</div>
-					<button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success">Save</button>
+					
+					<button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success fa fa-save" data-toggle="tooltip" title="Save"></button>
 					<!-- <button type="button" id="update" name="update" class="btn btn-sm btn-warning">Update</button> -->
-					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger">Delete</button>
+					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger fa fa-times-circle-o" data-toggle="tooltip" title="Delete"></button>
 
-					<button type="button" id="cetak" class="btn btn-sm btn-warning">Cetak</button>
+					<button type="button" id="cetak" class="btn btn-sm btn-warning fa fa-print" data-toggle="tooltip" title="Cetak"></button>
 
-					<button type="reset" id="reset" class="btn btn-sm btn-primary">Reset</button>					
+					<button type="reset" id="reset" class="btn btn-sm btn-primary fa fa-refresh" data-toggle="tooltip" title="Reset"></button>					
+
+					<button type="buton" id="upload" class="btn btn-sm btn-primary fa fa-upload " data-toggle="tooltip" title="Upload"></button>						
 				<!-- </form>/. End Form CRUD Book Master -->
 			</fieldset>
+			<br>
+			<p>
+				<b id="note">Note!</b><br>
+				<b id="note">*</b> Dosen pembimbing akan diisi oleh <b>Ka Prodi</b><br>
+				<b id="note">*</b> Cetak dapat berfungsi apabila status pengajuan disetujui <br>
+				<b id="note">*</b> Langkah selanjutnya, mahasiswa dapat Upload <b>Surat Permohonan KP</b> <br>&nbsp;&nbsp;&nbsp;dan <b>Surat Balasan dari Perusahaan</b>
+			</p>
 			</div><!-- /. End Form Place -->
 
 			<!-- Datagrid Place -->
@@ -119,7 +101,8 @@ session_start();
 				<table id="tabelpengajuankp" class="display" cellspacing="0">
 					<thead>
 						<tr>
-							<th>No Pengajuan</th>
+							<th>No. Pengajuan</th>
+							<th>Dos. Pembimbing</th>
 							<th>Instansi</th>
 							<th>Judul</th>
 							<th>Alamat</th>
@@ -128,10 +111,12 @@ session_start();
 					</thead>
 	                <tbody></tbody>
 				</table>
+				
 			</div><!-- /. End Datagrid Place -->
 
 		</div>
 	</div>	<!-- ./End Container datagrid dan form -->
+	
 
 </body>
 </html>

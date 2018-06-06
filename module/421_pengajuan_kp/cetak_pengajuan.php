@@ -34,6 +34,12 @@ hr {
     width: 75%;
 
 }
+.wrapper{
+        position: relative;
+        margin: auto;
+        width: 900px;
+        background: black;
+    }
 
     </style>
 </head>
@@ -69,6 +75,7 @@ hr {
     <div class="row col-md-1"></div>
     <div class="row col-md-8">
         <p>
+            <center><img class="wrapper" src="../lib/img/kop.png"></center>
             <b><u><center>FORMULIR PENGAJUAN LOKASI DAN TOPIK KERJA PRAKTEK(KP)</center></u></b>
             <br><br>
             Yang bertanda tangan dibawah ini,
@@ -119,23 +126,23 @@ hr {
             <br>
             Demikian Permohonan Usulan Judul Kerja Praktek atas terkabulnya saya ucapkan terimakasih. 
             <br><br><br> 
-            <table width="100%" align="center">
-
-                <tr>
-                    <td></td>
-                    <td>Wonosobo, <?php echo date('d F Y'); ?></td>
-                </tr>
-                <tr>
-                    <td><br><br><br><br></td>
-                    <td id="pemohon" contenteditable="true"></td>
-                </tr>
-                <tr>
-                    <td><br><br><br><br></td>
-                    <td><b>Pemohon</b></td>
-                    <td></td>
-                </tr>
-
-            </table>
+        <table align="right">
+                    <tr>
+                        <td align="center">Wonosobo, <?php echo date('d F Y'); ?></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center"><div id="pemohon"></div></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="center">Pemohon</td>
+                    </tr>
+                </table>
         </p>
         <p>
         <hr style="width: 100%; color: black; height: 3px; background-color:black;" /> 

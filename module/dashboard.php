@@ -40,6 +40,7 @@ if(!$_SESSION){
           }
         }
     </script>
+
     <style>
       .navbar, .navbar-header{
         background-color: pink;
@@ -54,6 +55,7 @@ if(!$_SESSION){
         font-family: "sqr";
       }
     </style>
+    
   <link href="../lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
@@ -102,8 +104,9 @@ if(!$_SESSION){
               </li>
 
                <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#"><div style="color: grey">1.3-Laporan</div></a>
+                  <a tabindex="-1" href="#"><div>1.3-Laporan</div></a>
                   <ul class="dropdown-menu">
+                      <li><a class="klik" id="131" href="#">1.3.1-File laporan KP</a></li>
                   </ul>
               </li>
 
@@ -227,6 +230,8 @@ if(!$_SESSION){
               $('.konten').load('112_dosen/dosen.php');  
             }else if(menu == "121"){
               $('.konten').load('121_srt_pembimbingan/surat_pembimbingankp.php');
+            }else if(menu == "131"){
+              $('.konten').load('131_file_laporan/flaporan.php');
             }else if(menu == "411"){
               $('.konten').load('411_pengajuan_kp/pengajuan_kp.php');
             }else if(menu == "311"){
@@ -247,6 +252,8 @@ if(!$_SESSION){
                   $('.konten').load('112_dosen/dosen.php');  
                 }else if(menu == "121"){
                   $('.konten').load('121_srt_pembimbingan/surat_pembimbingankp.php');
+                }else if(menu == "131"){
+                  $('.konten').load('131_file_laporan/flaporan.php');
                 }else if(menu == "411"){
                   $('.konten').load('411_pengajuan_kp/pengajuan_kp.php');
                 }else if(menu == "311"){

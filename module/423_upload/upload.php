@@ -50,10 +50,6 @@ session_start();
 	<script src="../bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script> 
     <script src="../bower_components/moment/min/moment.min.js" type="text/javascript"></script>   
     <script src="../bower_components/bootstrap-select/js/bootstrap-select.js" type="text/javascript"></script>
-    <!-- <script src="../bower_components/wnumb/wNumb.js" type="text/javascript"></script> -->
-    <!-- <script src="../bower_components/Jquery-Price-Format/jquery.priceformat.min.js" type="text/javascript"></script> -->
-    <!-- <script src="../bower_components/PrintArea/demo/jquery.PrintArea.js" type="text/javascript"></script> -->
-
 
 	 <!-- Data Tables CSS -->
     <link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-dt/css/jquery.dataTables.min.css">
@@ -61,7 +57,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="../bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
 	
 	<!-- Call Custom Library -->
-	<!-- <script src="../module/423_upload/upload.js" type="text/javascript"></script> -->
+	<script src="../module/423_upload/upload.js" type="text/javascript"></script>
 </head>
 <body>
 	<br>
@@ -82,10 +78,14 @@ session_start();
 						<input type="file" class="form-control" id="flaporan" name="flaporan" 
 						required placeholder="Chose file ..." readonly="true">
 					</form> -->
-					<form action="http://localhost/sikap_api/app/module/upload/aksi.php" method="POST" enctype="file/form-data">
+					<form action="aksi.php" method="POST" enctype="multipart/form-data">
 						<table>
 					    <tr>
-					        <td><input type="file" name="fupload"></td>
+					        <td>
+					        	<label>File *.pdf<input type="file" name="fupload" accept="application/pdf"></label></td>
+
+					        <td>
+					        	<label>File *.docx<input type="file" name="file_docx" accept=".docx,.doc"></label></td>
 					    </tr>
 					    <tr>
 					        <td> <input type="submit" value="upload"></td>
@@ -99,20 +99,6 @@ session_start();
 				<!-- </form>/. End Form CRUD Book Master -->
 			</fieldset>
 			</div><!-- /. End Form Place -->
-
-			<!-- Datagrid Place -->
-			<!-- <div class="col-md-7 column">
-				<table id="tabelflaporan" class="display" cellspacing="0">
-					<thead>
-						<tr>
-							<th>No. Pengajuan</th>
-							<th>F Lapporan</th>
-							<th>Tanggal Upload</th>
-						</tr>
-					</thead>
-	                <tbody></tbody>
-				</table>
-			</div> --><!-- /. End Datagrid Place -->
 
 		</div>
 	</div>	<!-- ./End Container datagrid dan form -->

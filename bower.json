@@ -1,0 +1,18 @@
+{
+  "name": "sikap",
+  "description": "sistem kerja praktek",
+  "main": "",
+  "authors": [
+    "wahyu arif kurniawan"
+  ],
+  "license": "GPL",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

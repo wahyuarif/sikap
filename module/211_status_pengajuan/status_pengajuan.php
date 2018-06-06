@@ -43,7 +43,7 @@ session_start();
 	</style>
 	<!-- Call JQuery Library -->
     <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
-
+    <link rel="stylesheet" href="../lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- Call DataTables Library -->
     <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
@@ -93,10 +93,12 @@ session_start();
 				            </select>
 							</div>
 						</div>
+					</div>
 					<!-- <button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success">Save</button> -->
-					<button type="button" id="update" name="update" class="btn btn-sm btn-warning">Update</button>
-					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger">Delete</button>	
-					<button type="reset" id="reset" class="btn btn-sm btn-primary">Reset</button>						
+					<button type="button" id="update" name="update" class="btn btn-sm btn-warning fa fa-check-circle-o" data-toggle="tooltip" title="Update"></button>
+					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger fa fa-times-circle-o" data-toggle="tooltip" title="Delete"></button>	
+					<button type="reset" id="reset" class="btn btn-sm btn-primary fa fa-refresh" data-toggle="tooltip" title="Reset"></button>		
+
 				<!-- </form>/. End Form CRUD Book Master -->
 			</fieldset>
 			</div><!-- /. End Form Place -->

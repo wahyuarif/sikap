@@ -3,14 +3,7 @@ $(document).ready(function() {
 	var table;
 	  var urlAPI = "http://localhost/sikap_api";
 	  
-	  $(function () {
-			loadData();
-			$('#datetimepicker1').datetimepicker({
-				format:'YYYY-MM-DD'
-			});
-	  });
-
-	  table = $('#tabelbimbingan').DataTable( {
+	table = $('#tabelbimbingan').DataTable( {
 		"ajax": urlAPI+"/app/module/bimbingan/get_bimbingan.php",
 		"columns": [
 			{"data": "no_pengajuan"},
@@ -19,6 +12,13 @@ $(document).ready(function() {
 			{"data": "bahasan"}
 		]
 	});
+
+	  $(function () {
+			loadData();
+			$('#datetimepicker1').datetimepicker({
+				format:'YYYY-MM-DD'
+			});
+	  });
 
 	$('#tabelbimbingan tbody').on('click', 'tr', function () {
 		resetForm();

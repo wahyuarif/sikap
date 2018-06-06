@@ -123,8 +123,9 @@ if(!$_SESSION){
                   <li class="dropdown-submenu">
                     <a href="#">2.2-Transaksi</a>
                     <ul class="dropdown-menu">
-                       <li><a class="klik" id="211" href="#">2.1.1-Status Pengajuan</a></li>
-                       <li><a class="klik" id="212" href="#">2.1.2-Penentuan Dosbing</a></li>
+                       <li><a class="klik" id="211" href="#">2.2.1-Status Pengajuan</a></li>
+                       <li><a class="klik" id="212" href="#">2.2.2-Penentuan Dosbing</a></li>
+                       <li><a class="klik" id="223" href="#">2.2.3-Surat Tugas</a></li>
                     </ul>
                   </li>
                   <li class="divider"></li>
@@ -222,6 +223,8 @@ if(!$_SESSION){
               $('.konten').load('211_status_pengajuan/status_pengajuan.php');                 
             }else if(menu == "212"){
               $('.konten').load('212_penentuandosbing/dosbing.php');                 
+            }else if(menu == "223"){
+              $('.konten').load('223_surat_tugas/srt_tugas.php');                 
             }else if(menu == "411"){
               $('.konten').load('411_pengajuan_kp/pengajuan_kp.php');
             }else if(menu == "311"){
@@ -244,6 +247,8 @@ if(!$_SESSION){
                   $('.konten').load('211_status_pengajuan/status_pengajuan.php');                 
                 }else if(menu == "212"){
                   $('.konten').load('212_penentuandosbing/dosbing.php');                 
+                }else if(menu == "223"){
+                  $('.konten').load('223_surat_tugas/srt_tugas.php');                 
                 }else if(menu == "411"){
                   $('.konten').load('411_pengajuan_kp/pengajuan_kp.php');
                 }else if(menu == "311"){

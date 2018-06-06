@@ -7,6 +7,7 @@ $(document).ready(function() {
 		"ajax": urlAPI+"/app/module/pengajuan_kp/get_pengajuan_kp.php",
 		"columns": [
       		{"data": "no_pengajuan" },
+      		{"data": "nm_dosen" },
 			{"data": "nm_instansi" },
 			{"data": "judul" },
 			{"data": "alamat" },
@@ -82,6 +83,7 @@ $(document).ready(function() {
 	/*Cetak*/
 	$('#cetak').click(function(){
 		cetakPengajuanKp();
+
 		});
 
 
@@ -99,6 +101,7 @@ $(document).ready(function() {
 			$(this).val("");
 		});
 	}
+
 
 	function cetakPengajuanKp(){
 		var no_pengajuan = $('#no_pengajuan').val();

@@ -3,30 +3,10 @@ $(document).ready(function() {
 	var table;
 	  var urlAPI = "http://localhost/sikap_api";
 	/* LOAD DATA TABLES LIBRARY */
-	table = $('#tabelpengajuankp').DataTable( {
-		"ajax": urlAPI+"/app/module/pengajuan_kp/get_pengajuan_kp.php",
-		"columns": [
-      		{"data": "no_pengajuan" },
-			{"data": "nm_instansi" },
-			{"data": "judul" },
-			{"data": "alamat" },
-			{"data": "status" }
-			  
-		]
-	});
 
-	$('#tabelpengajuankp tbody').on('click', 'tr', function () {
-		resetForm();
-		var data = table.row(this).data();
-        $('#no_pengajuan').val(data["no_pengajuan"]);
-        loadData();
-        $('#save').attr('disabled', 'disabled');
-        $('#cetak').removeAttr('disabled', 'disabled');
-        $('#delete').removeAttr('disabled');
-        $('#no_pengajuan').focus();
-	});
-
-	/* EVENT KEY ENTER */
+	 $(function () {
+			loadData();
+	  });
 	
 	
 	$('#judul').keydown(function(e){
@@ -61,7 +41,6 @@ $(document).ready(function() {
     /* RESET */
     $('#reset').click(function(){
     	resetForm();
-    	
     });
 
 	/*Cetak*/
@@ -70,17 +49,15 @@ $(document).ready(function() {
 		});
 
 	function cetakIjinSurvey(){
-		var no_pengajuan = $('#no_pengajuan').val();
-        $('.konten').load('424_srt_ijin_survey/srt_ijin_survey.php','no_pengajuan='+no_pengajuan);
+		var nim = $('#nim').val();
+        $('.konten').load('424_srt_ijin_survey/srt_ijin_survey.php','nim='+nim);
 	}
 
 
 		/* CUSTOM FUNCTION */
 	function resetForm()
 	{
-		$('#save').removeAttr('disabled');
-		$('#cetak').attr('disabled', 'disabled');
-		$('#delete').attr('disabled', 'disabled');
+		$('#cetak').attr('disabled');
 		$('input[type=text]').each(function(){
 			$(this).val("");
 		});
@@ -91,11 +68,15 @@ $(document).ready(function() {
 	}
 
 	function loadData(){
-		$.getJSON(urlAPI+'/app/module/srt_ijin_survey/surat_load.php', function(json) {
-			$('#no_pengajuan').val(json.no_pengajuan);
+		$.getJSON(urlAPI+'/app/module/srt_ijin_survey/data_load.php', function(json) {
 			$('#nim').val(json.nim);
 			$('#nm_mhs').val(json.nm_mhs);
 			$('#prodi').val(json.prodi);
+			$('#nm_instansi').val(json.nm_instansi);
+			$('#no_surat').val(json.no_surat);
+			$('#nm_dosen').val(json.nm_dosen);
+			$('#jabatan').val(json.jabatan);
+			console.log(json);
 		});
 	}
 

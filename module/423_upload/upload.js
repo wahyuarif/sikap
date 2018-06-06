@@ -33,12 +33,6 @@ $(document).ready(function() {
 
 	/* BUTTON EVENT--------------------------------------------------------*/
 
-	    /* RESET */
-	    $('#reset').click(function(){
-			resetForm();
-			$('.konten').load('321_bimbingan/bimbingan.php');
-	    });
-
 	    /* SAVE */
 	    $('#upload').click(function(){
 	    	uploadLaporan();

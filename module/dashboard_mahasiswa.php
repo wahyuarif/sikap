@@ -141,7 +141,7 @@ if(!$_SESSION){
                     <li><a class="klik" id="421" href="#">4.2.1-Pengajuan Tempat KP</a></li>
                     <li><a class="klik" id="422" href="#">4.2.2-Bimbingan</a></li>
                     <li><a class="klik" id="423" href="#">4.2.3-Upload</a></li>
-                    <li><a class="klik" id="424" href="#">4.2.4-Surat Ijin Survey</a></li>
+                    <li><a class="klik" id="424" href="#">4.2.4-Surat Ijin KP</a></li>
                   </ul>
                 </li>
                 <!--  -->

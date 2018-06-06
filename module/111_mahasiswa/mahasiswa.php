@@ -11,36 +11,10 @@ session_start();
 	<title></title>
 
 	<!-- Custom CSS -->
-	<style type="text/css">
-		.form-control{
-			padding-bottom: auto;
-			margin-bottom: 5px;
-		}
+	<link rel="stylesheet" type="text/css" href="../lib/css/custom.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="../lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-		fieldset 
-			{
-				border: 1px solid #ddd !important;
-				margin: 0;
-				xmin-width: 0;
-				padding: 10px;       
-				position: relative;
-				border-radius:4px;
-				background-color:#f5f5f5;
-				padding-left:10px!important;
-			}	
-			
-		legend
-			{
-				font-size:14px;
-				font-weight:bold;
-				margin-bottom: 0px; 
-				width: 35%; 
-				border: 1px solid #ddd;
-				border-radius: 4px; 
-				padding: 5px 5px 5px 10px; 
-				background-color: #ffffff;
-			}
-	</style>
 	<!-- Call JQuery Library -->
     <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
 
@@ -109,7 +83,7 @@ session_start();
 							</div>
 							
 							<div class="col-md-4">
-								<select class="form-control" name="status" id="status">
+							<select class="form-control" name="status" id="status">
 								<option value="">Status</option>
 				                <option value="Aktif">Aktif</option>
 				                <option value="Tidak Aktif">Tidak Aktif</option>
@@ -118,10 +92,10 @@ session_start();
 						</div>
 				
 					</div>
-					<button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success">Save</button>
-					<button type="button" id="update" name="update" class="btn btn-sm btn-warning">Update</button>
-					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger">Delete</button>	
-					<button type="reset" id="reset" class="btn btn-sm btn-primary">Reset</button>						
+					<button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success fa fa-save" data-toggle="tooltip" title="Save"></button>
+					<button type="button" id="update" name="update" class="btn btn-sm btn-warning fa fa-check-circle-o" data-toggle="tooltip" title="Update"></button>
+					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger fa fa-times-circle-o" data-toggle="tooltip" title="Delete"></button>
+					<button type="reset" id="reset" class="btn btn-sm btn-primary fa fa-refresh" data-toggle="tooltip" title="Reset"></button>
 				</form>
 			</fieldset>
 			</div><!-- /. End Form Place -->

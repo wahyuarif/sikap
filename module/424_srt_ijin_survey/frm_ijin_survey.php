@@ -43,7 +43,7 @@ session_start();
 	</style>
 	<!-- Call JQuery Library -->
     <script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
-
+    <link rel="stylesheet" href="../lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- Call DataTables Library -->
     <script src="../bower_components/datatables.net/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
@@ -53,7 +53,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
 	<!-- Call Custom Library -->
-	<script src="../module/424_srt_ijin_survey/srt_ijin_survey.js" type="text/javascript"></script>
+	<script src="../module/424_srt_ijin_survey/frm_ijin_survey.js" type="text/javascript"></script>
 </head>
 <body>
 	<br>
@@ -79,9 +79,12 @@ session_start();
 
 		            <!-- Imput Hiden, hanya untuk ngambil data -->
 		        
-								<input type="hidden" name="nim" id="nim">
-								<input type="hidden" name="nm_mhs" id="nm_mhs">
-								<input type="hidden" name="prodi" id="prodi">
+								<input type="text" name="nim" id="nim">
+								<input type="text" name="nm_mhs" id="nm_mhs">
+								<input type="text" name="prodi" id="prodi">
+								<input type="text" name="nm_instansi" id="nm_instansi">
+								<input type="text" name="nm_dosen" id="nm_dosen">
+								<input type="text" name="jabatan" id="jabatan">
 		            <!-- end hiden type -->
 								
 							<!-- <label>Judul Kp</label>
@@ -106,13 +109,11 @@ session_start();
 
 					
 					</div>
-					<button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success">Save</button>
+					<button type="submit" id="save" name="save" value="save" class="btn btn-sm btn-success fa fa-save" data-toggle="tooltip" title="Save"></button>
 					<!-- <button type="button" id="update" name="update" class="btn btn-sm btn-warning">Update</button> -->
-					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger">Delete</button>
-
-					<button type="button" id="cetak" class="btn btn-sm btn-warning">Cetak</button>
-
-					<button type="reset" id="reset" class="btn btn-sm btn-primary">Reset</button>					
+					<button type="button" id="delete" name="delete" class="btn btn-sm btn-danger fa fa-times-circle-o" data-toggle="tooltip" title="Delete"></button>
+					<button type="button" id="cetak" class="btn btn-sm btn-warning fa fa-print" data-toggle="tooltip" title="Cetak"></button>
+					<button type="reset" id="reset" class="btn btn-sm btn-primary fa fa-refresh" data-toggle="tooltip" title="Reset"></button>
 				<!-- </form>/. End Form CRUD Book Master -->
 			</fieldset>
 			</div><!-- /. End Form Place -->
