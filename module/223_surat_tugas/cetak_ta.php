@@ -142,12 +142,12 @@ session_start();
                </table>
             </p>
 
-            <p>
-                Selama melakukan pembimbingan, harus dailaksanakan dengan sungguh-sungguh dan <br>
-                tidak menyimpang dari kaidah keilmuannya. Pembimbing Kerja Praktek (KP)  <br>
-                maksimal dilakukuan selama 6 bulan . Jika sampai batas waktu yang telah ditentukan mahasiswa <br>
-                tersebut di atas belum menyelesaikan KP, maka KP tersebut dianggap gugur dan <br>
-                mahasiswa harus mengambil judul KP yang baru. <br><br>
+            <p style="white-space: pre;">
+                Selama melakukan pembimbingan, harus dilaksanakan dengan sungguh-sungguh dan 
+                tidak menyimpang dari kaidah keilmuannya. Pembimbingan TA / Skripsi maksimal 
+                dilakukan selama 12 bulan (2 Semester). Jika sampai batas waktu yang telah ditentukan mahasiswa tersebut 
+                belum menyelesaikan TA / Skripsi, maka TA / Skripsi tersebut dianggap gugur dan mahasiswa harus mengambil judul TA / Skripsi yang 
+                berbeda dari judul sebelumnya. <br><br>
 
                 Demikian agar dilaksanakan sebagaimana mestinya. <br><br>
                 <b><i>Wassalamu’alaikum Wr. Wb.</i></b>

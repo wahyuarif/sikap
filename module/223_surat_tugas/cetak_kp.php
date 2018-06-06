@@ -77,7 +77,12 @@ session_start();
 
 <input type="hidden" name="no_pengajuan" id="no_pengajuan" value="<?php echo $no_pengajuan; ?>">
 
+<?php 
+$array_bulan = array(1=>"I","II","III", "IV", "V","VI","VII","VIII","IX","X", "XI","XII");
+$bulan = $array_bulan[date('n')];
 
+echo  "$bulan";
+?>
 <br>
     <div id="cetak">
     <div class="row col-md-1"></div>
@@ -87,7 +92,7 @@ session_start();
             <center><img class="wrapper" src="../lib/img/kop.png"></center>
             
             <b><u><center>SURAT TUGAS PEMBIMBINGAN KERJA PRAKTEK</center></u></b><br>
-            <center><b>No. 718/FTIK-UNSIQ/XII/2012</b></center>
+            <center><b>No. 718/FTIK-UNSIQ/<?php echo "$bulan" ?>/<?php echo date('Y'); ?></b></center>
             <br><br>
             <b><i>Assalamu’alaikum Wr. Wb.</i></b> <br>
             
@@ -100,6 +105,21 @@ session_start();
                         <td width="80">Nama</td>
                         <td>:</td>
                         <td id="nm_dosen" contenteditable="true">*input disini</td>
+                    </tr>
+                     <tr>
+                        <td width="80">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>(Pembimbing 1)</td>
+                    </tr>
+                      <tr>
+                        <td width="80">Nama</td>
+                        <td>:</td>
+                        <td id="nm_dosen" contenteditable="true">*input disini</td>
+                    </tr>
+                     <tr>
+                        <td width="80">&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>(Pembimbing 2)</td>
                     </tr>
                 </table>
             </p>
